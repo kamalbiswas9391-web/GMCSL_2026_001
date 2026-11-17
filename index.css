@@ -1,0 +1,50 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+:root {
+  --gmcsl-primary: #087443;
+  --gmcsl-secondary: #142D4E;
+  --gmcsl-accent: #D5A642;
+  --gmcsl-bg: #F4F7F6;
+  --gmcsl-surface: #FFFFFF;
+  --gmcsl-text: #1D2939;
+  --gmcsl-muted: #667085;
+  --gmcsl-sidebar: #142D4E;
+  --gmcsl-header: #FFFFFF;
+}
+
+.dark {
+  --gmcsl-bg: #0B1320;
+  --gmcsl-surface: #111B2E;
+  --gmcsl-text: #F1F5F9;
+  --gmcsl-muted: #94A3B8;
+  --gmcsl-sidebar: #0D192C;
+  --gmcsl-header: #111B2E;
+}
+
+body {
+  font-family: 'DM Sans', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+}
+
+h1, h2, h3, h4, .font-display {
+  font-family: 'Plus Jakarta Sans', 'Noto Sans Bengali', system-ui, -apple-system, sans-serif;
+}
+
+.font-mono-tabular {
+  font-family: 'JetBrains Mono', ui-monospace, SFMono-Regular, monospace;
+  font-variant-numeric: tabular-nums;
+}
+
+.tabular-nums {
+  font-variant-numeric: tabular-nums;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  body {
+    background: #FFFFFF !important;
+    color: #000000 !important;
+  }
+}

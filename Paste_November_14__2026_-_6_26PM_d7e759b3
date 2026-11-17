@@ -1,0 +1,4935 @@
+MASTER DEVELOPMENT PROMPT
+
+GMCSL – GARAKHIA DHAP MULTIPURPOSE CO-OPERATIVE SOCIETY LTD.
+
+COMPLETE PROFESSIONAL ONLINE + OFFLINE SOCIETY MANAGEMENT WEBSITE
+
+Dual Mode | Offline First | Automatic Synchronization | PWA | Four Independent Role Dashboards
+
+You are a senior full-stack software architect, UI/UX designer, database engineer, cybersecurity engineer, PWA developer, offline-first application specialist, and professional website developer.
+
+Your task is to DESIGN, DEVELOP, and IMPLEMENT a complete, fully functional, production-oriented, secure, bilingual, online and offline Society Management System for:
+
+Organization: Garakhia Dhap Multipurpose Co-operative Society Ltd.
+
+Application Name: GMCSL Society Management System
+
+Short Name: GMCSL
+
+Application Type: Full-Stack Society Management Website
+
+Primary Platform: Responsive Website
+
+Mobile Support: Android Mobile, Tablet, Desktop
+
+PWA: Installable Progressive Web Application
+
+Languages: Assamese and English
+
+User Roles:
+
+System
+
+
+President
+
+
+Secretary
+
+
+Member
+
+
+Primary Business Database: Google Sheets
+
+Backend: Secure Node.js Server API
+
+Frontend: React + TypeScript
+
+Offline Local Database: IndexedDB
+
+Offline Application Technology: Service Worker + PWA
+
+File Storage: Secure Google Drive or Firebase Storage
+
+Deployment: Google AI Studio supported deployment environment
+
+MOST IMPORTANT DEVELOPMENT REQUIREMENT
+
+Build ONE COMPLETE APPLICATION that supports BOTH ONLINE MODE and OFFLINE MODE.
+
+The website must not stop working simply because the internet connection is unavailable.
+
+All existing features, modules, forms, dashboards, financial calculations, permissions, and workflows specified in this prompt must remain available according to their offline capabilities and security restrictions.
+
+Do not create only a static design, landing page, dashboard mockup, or demonstration prototype.
+
+Build a complete working application with:
+
+Real authentication.
+
+
+Four independent role-based dashboards.
+
+
+Functional navigation.
+
+
+Real database integration.
+
+
+Online and offline operation.
+
+
+Local data storage.
+
+
+Automatic synchronization.
+
+
+Secure financial calculations.
+
+
+Dynamic role permissions.
+
+
+Forms and validation.
+
+
+Reports.
+
+
+PDF generation.
+
+
+Document uploads.
+
+
+Notifications.
+
+
+Audit history.
+
+
+Backup and recovery.
+
+
+Responsive mobile interface.
+
+
+Do not omit any specified module, form, field, button, permission, or feature.
+
+1. ONLINE + OFFLINE DUAL MODE ARCHITECTURE
+
+This is the most important additional requirement.
+
+The application must operate in two different modes.
+
+1.1 Online Mode
+
+When internet connectivity is available:
+
+Connect to the secure Node.js backend.
+
+
+Authenticate users through the backend.
+
+
+Read records from Google Sheets.
+
+
+Create new records.
+
+
+Update authorized records.
+
+
+Synchronize financial transactions.
+
+
+Upload images and documents.
+
+
+Verify online payments.
+
+
+Generate reports.
+
+
+Retrieve live dashboard statistics.
+
+
+Synchronize all pending offline changes.
+
+
+Update notifications.
+
+
+Retrieve the latest permission settings.
+
+
+Google Sheets must remain the primary official business-record database.
+
+1.2 Offline Mode
+
+When internet connectivity is unavailable:
+
+The website must continue operating using locally stored application data.
+
+Use:
+
+IndexedDB for structured local records.
+
+
+Service Worker for application caching.
+
+
+Cache Storage for application resources.
+
+
+PWA manifest for installation.
+
+
+Local synchronization queue for pending operations.
+
+
+Offline functionality must include:
+
+Open the previously installed application.
+
+
+Display the cached homepage.
+
+
+Open the login interface.
+
+
+Display previously synchronized authorized dashboard information.
+
+
+View previously synchronized member records according to permissions.
+
+
+View previously synchronized saving records.
+
+
+View previously synchronized loan records.
+
+
+View previously synchronized share records.
+
+
+View previously synchronized attendance records.
+
+
+View previously synchronized meeting records.
+
+
+View previously synchronized notices.
+
+
+View previously synchronized reports.
+
+
+Enter new saving records when authorized.
+
+
+Enter loan records when authorized.
+
+
+Enter attendance records when authorized.
+
+
+Enter meeting records when authorized.
+
+
+Enter cash book transactions when authorized.
+
+
+Enter share records when authorized.
+
+
+Create offline loan applications.
+
+
+Prepare payment submissions.
+
+
+Generate available offline documents and receipts with clearly marked provisional status.
+
+
+Save pending operations locally.
+
+
+Display synchronization status.
+
+
+Preserve entered data if the application is closed or refreshed.
+
+
+Automatically synchronize pending data when internet connectivity returns.
+
+
+All offline operations must follow the locally available, previously synchronized permission rules.
+
+1.3 Offline Database
+
+Use IndexedDB as the local application database.
+
+Create separate local object stores for:
+
+Members.
+
+
+System Users.
+
+
+Savings.
+
+
+Loans.
+
+
+Loan Applications.
+
+
+Shares.
+
+
+Cash Book.
+
+
+Attendance.
+
+
+Meetings.
+
+
+Online Payments.
+
+
+Notifications.
+
+
+Notices.
+
+
+Receipts.
+
+
+Certificates.
+
+
+Permissions.
+
+
+Society Settings.
+
+
+Media Metadata.
+
+
+Pending Sync Queue.
+
+
+Sync History.
+
+
+Offline Audit Queue.
+
+
+Each local record must include:
+
+Unique ID.
+
+
+Record ID.
+
+
+Created Date.
+
+
+Updated Date.
+
+
+Created By.
+
+
+Updated By.
+
+
+Sync Status.
+
+
+Last Synced Time.
+
+
+Record Version.
+
+
+Offline Operation ID.
+
+
+Sync Status:
+
+Synced.
+
+
+Pending.
+
+
+Syncing.
+
+
+Failed.
+
+
+Conflict.
+
+
+Requires Review.
+
+
+Never use localStorage as the permanent financial database.
+
+Use IndexedDB for offline structured data.
+
+1.4 Automatic Synchronization
+
+Implement a complete bidirectional synchronization system.
+
+When internet connectivity returns:
+
+Detect the online connection.
+
+
+Check backend availability.
+
+
+Authenticate the current session.
+
+
+Validate the user's current permissions.
+
+
+Retrieve the pending offline operation queue.
+
+
+Synchronize pending records in the correct order.
+
+
+Validate all financial transactions on the backend.
+
+
+Prevent duplicate records.
+
+
+Detect conflicting changes.
+
+
+Update successfully synchronized records.
+
+
+Download updated server records.
+
+
+Refresh dashboard statistics.
+
+
+Update synchronization history.
+
+
+Display a success or failure notification.
+
+
+Synchronization must also occur:
+
+When the application opens.
+
+
+When the user logs in.
+
+
+When the browser regains connectivity.
+
+
+When the user presses Sync Now.
+
+
+When the application returns to the foreground.
+
+
+At suitable periodic intervals while the application is active.
+
+
+Use Background Sync where supported, with a reliable foreground synchronization fallback.
+
+Do not depend exclusively on Background Sync because browser support varies.
+
+1.5 Synchronization Conflict Management
+
+Implement proper conflict detection.
+
+Example:
+
+If an administrator edits a saving record online while another authorized officer edits the same record offline, the system must not silently overwrite either version.
+
+Provide:
+
+Record Version.
+
+
+Last Modified Time.
+
+
+Modified By.
+
+
+Server Version.
+
+
+Local Version.
+
+
+Conflict Details.
+
+
+Conflict Resolution Screen.
+
+
+Possible resolution actions:
+
+Keep Server Version.
+
+
+Review Local Version.
+
+
+Merge permitted non-financial fields.
+
+
+Submit Correction Request.
+
+
+Authorized Manual Resolution.
+
+
+Financial transactions must never be automatically merged in a way that duplicates or changes monetary values.
+
+Use transaction IDs and idempotency keys.
+
+Never silently delete or overwrite financial records during synchronization.
+
+Use reversal and correction entries for financial adjustments.
+
+1.6 Offline Security
+
+Offline access must follow strict security rules.
+
+Cache only authorized information.
+
+
+Never cache another member's private financial information for a member account.
+
+
+Never store plain-text passwords or PINs.
+
+
+Never store service-account credentials locally.
+
+
+Encrypt sensitive locally stored data where practical using secure device-bound key management.
+
+
+Clear sensitive cached data when a user logs out where appropriate.
+
+
+Provide session expiration.
+
+
+Require reauthentication after session expiry.
+
+
+Do not allow expired offline permissions to grant new privileges.
+
+
+Do not permit offline permission escalation.
+
+
+Do not allow an offline user to access System settings unless an authorized, previously established offline policy permits it.
+
+
+Clearly indicate when information may be outdated.
+
+
+Offline access must use a previously authenticated, securely provisioned session with an appropriate expiry policy.
+
+Do not pretend that an offline login can validate credentials against Google Sheets.
+
+For first-time login, password reset, account recovery, or expired sessions, require an internet connection.
+
+1.7 Offline Operation Restrictions
+
+Some actions require real-time external verification.
+
+These must not be falsely completed offline:
+
+UPI payment verification.
+
+
+Payment gateway confirmation.
+
+
+Final online payment settlement.
+
+
+Google Sheets synchronization.
+
+
+Account password reset through remote verification.
+
+
+New permission publication.
+
+
+Server-side backup.
+
+
+Final approval requiring current server authorization.
+
+
+External document verification.
+
+
+These actions may be prepared or queued offline when appropriate, but must remain Pending until verified online.
+
+Display clear messages such as:
+
+"Saved Offline – Waiting for Internet Synchronization."
+
+"Payment Verification Pending."
+
+"Server Approval Required."
+
+"Last Synchronized: Date and Time."
+
+"Your data is stored locally and will synchronize when internet connectivity returns."
+
+Never display a false successful synchronization or payment verification message.
+
+2. COMPLETE WEBSITE DESIGN
+
+Create a premium, modern, professional cooperative society management platform.
+
+The interface must look like a professional banking, financial management, and cooperative administration system.
+
+2.1 Visual Design System
+
+Use:
+
+Primary Color: Deep Emerald Green (#087443)
+
+Secondary Color: Royal Navy Blue (#142D4E)
+
+Accent Color: Premium Gold (#D5A642)
+
+Background: Light Grey (#F4F7F6)
+
+Card Background: White (#FFFFFF)
+
+Main Text: Dark Navy (#1D2939)
+
+Secondary Text: Slate Grey (#667085)
+
+Success: Green (#16A34A)
+
+Warning: Amber (#F59E0B)
+
+Danger: Red (#DC2626)
+
+Information: Blue (#2563EB)
+
+Include:
+
+Premium corporate visual style.
+
+
+Clean and elegant typography.
+
+
+Modern rounded dashboard cards.
+
+
+Soft shadows and subtle borders.
+
+
+Professional line icons.
+
+
+Attractive charts and graphs.
+
+
+Beautiful tables.
+
+
+Consistent spacing.
+
+
+Smooth subtle animations.
+
+
+Clear visual hierarchy.
+
+
+Professional loading indicators.
+
+
+Attractive empty states.
+
+
+Confirmation dialogs.
+
+
+Toast notifications.
+
+
+Form validation messages.
+
+
+Consistent design throughout all pages.
+
+
+2.2 Logo and Branding
+
+Create:
+
+Society logo upload.
+
+
+Society name.
+
+
+Organization registration details.
+
+
+Society address.
+
+
+Contact information.
+
+
+Official digital signature.
+
+
+Official document header.
+
+
+Official footer.
+
+
+Allow System to update branding information.
+
+Do not invent official registration numbers, addresses, or legal information.
+
+2.3 Responsive Layout
+
+Desktop:
+
+Fixed sidebar.
+
+
+Top navigation.
+
+
+Dashboard content.
+
+
+Data tables.
+
+
+Charts.
+
+
+Tablet:
+
+Collapsible sidebar.
+
+
+Responsive cards.
+
+
+Optimized tables.
+
+
+Mobile:
+
+Mobile-friendly header.
+
+
+Hamburger navigation.
+
+
+Bottom navigation where appropriate.
+
+
+Responsive cards.
+
+
+Touch-friendly buttons.
+
+
+Mobile-friendly forms.
+
+
+Horizontally scrollable tables.
+
+
+All pages must work properly on Android Chrome and desktop browsers.
+
+3. PWA INSTALLATION AND APP EXPERIENCE
+
+Make GMCSL an installable Progressive Web Application.
+
+Include:
+
+Web App Manifest.
+
+
+Service Worker.
+
+
+Application icons.
+
+
+Splash screen.
+
+
+Offline fallback page.
+
+
+Install Application button.
+
+
+Update notification.
+
+
+Cache management.
+
+
+Offline status indicator.
+
+
+Automatic cache updates.
+
+
+Allow users to install GMCSL on Android devices and supported desktop browsers.
+
+When installed, the website should open like a normal application.
+
+Provide an application update notification when a new version becomes available.
+
+Do not delete unsynchronized user data during application updates.
+
+4. GLOBAL HEADER AND LANGUAGE SYSTEM
+
+Create a global header containing:
+
+GMCSL Logo.
+
+
+Society Name.
+
+
+Page Title.
+
+
+Assamese / English Language Switcher.
+
+
+Online / Offline Status Indicator.
+
+
+Sync Status Indicator.
+
+
+Notification Bell.
+
+
+User Profile.
+
+
+Profile Settings.
+
+
+Logout Button.
+
+
+4.1 Bilingual Language Switcher
+
+Support:
+
+Assamese.
+
+
+English.
+
+
+Every interface element must support both languages:
+
+Dashboard.
+
+
+Navigation.
+
+
+Page titles.
+
+
+Buttons.
+
+
+Forms.
+
+
+Dropdown options.
+
+
+Validation messages.
+
+
+Notifications.
+
+
+Notices.
+
+
+Reports.
+
+
+Receipts.
+
+
+PDF documents.
+
+
+Changing the language must immediately update the interface without losing entered form data.
+
+Save language preferences.
+
+Do not use Bengali as the primary application language.
+
+5. DATABASE AND BACKEND ARCHITECTURE
+
+Use Google Sheets as the main official business-record database.
+
+Build a secure Node.js backend.
+
+Use Google Sheets API or secure Google Apps Script integration.
+
+Never expose credentials in frontend JavaScript.
+
+Use:
+
+React.
+
+
+TypeScript.
+
+
+Node.js.
+
+
+Secure REST APIs.
+
+
+Google Sheets API.
+
+
+IndexedDB.
+
+
+Service Worker.
+
+
+Secure Google Drive or Firebase Storage.
+
+
+5.1 Required Eight Primary Google Sheets
+
+Create and integrate these exact sheet names.
+
+1. Member_Register_Sheet
+
+Fields:
+
+Member ID.
+
+
+Member Name.
+
+
+Father's Name.
+
+
+Join Date.
+
+
+Date of Birth.
+
+
+Aadhaar Number.
+
+
+PAN Number.
+
+
+Voter ID.
+
+
+Bank Account Number.
+
+
+IFSC Code.
+
+
+Branch Name.
+
+
+Mobile Number.
+
+
+Gmail ID.
+
+
+State.
+
+
+District.
+
+
+Development Block.
+
+
+Village.
+
+
+Post Office.
+
+
+PIN Code.
+
+
+Panchayat.
+
+
+Photo URL.
+
+
+Signature URL.
+
+
+Member PIN Hash.
+
+
+Account Status.
+
+
+Created Date.
+
+
+Updated Date.
+
+
+2. Saving_register_Sheet
+
+Fields:
+
+Saving ID.
+
+
+Member ID.
+
+
+Member Name.
+
+
+Date.
+
+
+Monthly Saving Amount.
+
+
+Previous Saving Amount.
+
+
+Interest.
+
+
+Fine.
+
+
+Total Saving.
+
+
+Payment Status.
+
+
+Payment Method.
+
+
+Meeting Status.
+
+
+Receipt Number.
+
+
+Created By.
+
+
+Created Date.
+
+
+3. Share_Register_Sheet
+
+Fields:
+
+Share ID.
+
+
+Member ID.
+
+
+Member Name.
+
+
+Number of Shares.
+
+
+Face Value per Share.
+
+
+Total Share Value.
+
+
+Date.
+
+
+Note.
+
+
+Created By.
+
+
+4. Loan_Register_Sheet
+
+Fields:
+
+Loan ID.
+
+
+Loan Number.
+
+
+Member ID.
+
+
+Member Name.
+
+
+Loan Date.
+
+
+Loan Amount.
+
+
+Previous Loan Amount.
+
+
+Total Loan Amount.
+
+
+Loan Repayment.
+
+
+Interest.
+
+
+Fine.
+
+
+Current Loan Balance.
+
+
+Next Due Date.
+
+
+Payment Status.
+
+
+Loan Status.
+
+
+Payment Method.
+
+
+Member Signature URL.
+
+
+Secretary Signature URL.
+
+
+President Signature URL.
+
+
+Created By.
+
+
+Updated Date.
+
+
+5. Cash_book_Sheet
+
+Fields:
+
+Transaction ID.
+
+
+Date.
+
+
+Payment Mode.
+
+
+Description.
+
+
+Bank Amount.
+
+
+Cash Amount.
+
+
+Total Amount.
+
+
+Deposit Amount.
+
+
+Payment Amount.
+
+
+Balance.
+
+
+Reference Number.
+
+
+Created By.
+
+
+6. Attendance_Register_Sheet
+
+Fields:
+
+Attendance ID.
+
+
+Member ID.
+
+
+Member Name.
+
+
+Date.
+
+
+Meeting Location.
+
+
+Meeting Number.
+
+
+Meeting Method.
+
+
+Attendance Status.
+
+
+Created By.
+
+
+7. Loan_apply_Sheet
+
+Fields:
+
+Application ID.
+
+
+Member ID.
+
+
+Member Name.
+
+
+Mobile Number.
+
+
+Application Date.
+
+
+Loan Amount Required.
+
+
+Purpose of Loan.
+
+
+Additional Note.
+
+
+Application Status.
+
+
+Approval Note.
+
+
+Approved Amount.
+
+
+Approved By.
+
+
+Approval Date.
+
+
+President Signature.
+
+
+Secretary Signature.
+
+
+8. Online_Payments_Sheet
+
+Fields:
+
+Payment ID.
+
+
+Member ID.
+
+
+Member Name.
+
+
+Date.
+
+
+Amount.
+
+
+Payment Method.
+
+
+UPI Transaction ID.
+
+
+Payment Screenshot URL.
+
+
+Verification Status.
+
+
+Verified By.
+
+
+Verification Date.
+
+
+Receipt Number.
+
+
+Notes.
+
+
+5.2 Additional Required Database Sheets
+
+Create:
+
+System_Users_Sheet.
+
+
+Role_Permissions_Sheet.
+
+
+Society_Settings_Sheet.
+
+
+Notice_Board_Sheet.
+
+
+Notification_Sheet.
+
+
+Media_Manager_Sheet.
+
+
+Audit_Log_Sheet.
+
+
+Payment_Verification_Sheet.
+
+
+Meeting_Register_Sheet.
+
+
+Receipt_Register_Sheet.
+
+
+Certificate_Register_Sheet.
+
+
+Backup_Log_Sheet.
+
+
+Session_Log_Sheet.
+
+
+Also implement secure synchronization metadata and financial ledger storage using appropriately designed supporting sheets.
+
+5.3 Database Rules
+
+Every record must have a unique identifier.
+
+
+Prevent duplicate transactions.
+
+
+Use timestamps.
+
+
+Maintain audit history.
+
+
+Validate all inputs.
+
+
+Implement safe server-side database operations.
+
+
+Use reliable retry handling.
+
+
+Never silently fail.
+
+
+Preserve unsaved form data.
+
+
+Clearly report Google Sheets connection failures.
+
+
+5.4 Google Sheets Integration Settings
+
+Create:
+
+Spreadsheet ID Configuration.
+
+
+Connection Status.
+
+
+Test Connection Button.
+
+
+Sheet Mapping.
+
+
+Synchronization Status.
+
+
+Last Synchronization Time.
+
+
+Error Logs.
+
+
+Pending Synchronization Count.
+
+
+Sync Now Button.
+
+
+Retry Failed Synchronization.
+
+
+Create the required sheets automatically where authorized.
+
+If credentials are not configured, display exact setup instructions.
+
+Do not claim synchronization is active before a successful real connection.
+
+6. AUTHENTICATION AND ROLE SELECTION
+
+Create a professional Login Now page.
+
+Display four separate options:
+
+Member Login.
+
+
+Secretary Login.
+
+
+President Login.
+
+
+System Login.
+
+
+Each option must open its respective login page.
+
+6.1 Member Login
+
+Fields:
+
+Registered Mobile Number.
+
+
+Four-Digit PIN.
+
+
+Verify securely through the backend.
+
+Open Member Dashboard after successful authentication.
+
+6.2 Secretary Login
+
+Fields:
+
+Registered Mobile Number.
+
+
+Four-Digit PIN.
+
+
+Verify assigned account and role.
+
+Open Secretary Dashboard.
+
+6.3 President Login
+
+Fields:
+
+Registered Mobile Number.
+
+
+Four-Digit PIN.
+
+
+Verify assigned account and role.
+
+Open President Dashboard.
+
+6.4 System Login
+
+Create a separate secure System Login.
+
+Fields:
+
+System Email: kamalbiswas9391@gmail.com OR Mobile Number: 9101766401
+
+
+System Password: Kamal@9391 
+
+
+Use the initial administrator account details supplied separately during secure deployment configuration.
+
+Do not reproduce or hardcode private passwords in frontend source code, public database cells, or source repositories.
+
+Provision the initial System account through a secure first-time setup procedure.
+
+Require password change during first login.
+
+System must be able to:
+
+Change mobile number.
+
+
+Change password.
+
+
+Reset password.
+
+
+Manage security.
+
+
+Manage login sessions.
+
+
+Logout from all sessions.
+
+
+6.5 Security
+
+Implement:
+
+Server-side authentication.
+
+
+Secure password hashing.
+
+
+PIN hashing.
+
+
+Login attempt limits.
+
+
+Temporary account lockout.
+
+
+Session expiration.
+
+
+Secure logout.
+
+
+Server-side role verification.
+
+
+Password change.
+
+
+PIN reset.
+
+
+Authentication audit logs.
+
+
+Never rely only on hiding frontend buttons.
+
+7. DYNAMIC ROLE AND PERMISSION MANAGEMENT
+
+Roles:
+
+System.
+
+
+President.
+
+
+Secretary.
+
+
+Member.
+
+
+For every module provide:
+
+View Only.
+
+
+Add / Insert.
+
+
+Edit / Update.
+
+
+Delete.
+
+
+Hide Module.
+
+
+System must independently configure permissions for President, Secretary, and Member.
+
+Default permissions:
+
+Member Register: System controlled; authorized President and Secretary; Member own profile only.
+
+Saving Register: System controlled; authorized President and Secretary; Member own records only.
+
+Loan Register: System controlled; authorized President and Secretary; Member own records only.
+
+Cash Book: System controlled; authorized officers; Member hidden by default.
+
+Share Register: System controlled; authorized officers; Member own records only.
+
+Attendance: System controlled; authorized officers; Member own history only.
+
+Loan Application: Member can apply and view own application; authorized officers can review and process.
+
+Online Payment: Member can submit and view own payments; authorized officers can verify according to permission.
+
+Reports: System controlled; officers according to permissions; Member own reports only.
+
+Notices: Authorized publishing roles; all permitted users can view.
+
+System can change every permission.
+
+Create a professional Permission Switchboard.
+
+For each role display:
+
+Module Name.
+
+
+View Switch.
+
+
+Add Switch.
+
+
+Edit Switch.
+
+
+Delete Switch.
+
+
+Hide Module Switch.
+
+
+Permission changes must take effect immediately after saving and successful server authorization.
+
+Offline permission changes must never override server permissions.
+
+8. SYSTEM DASHBOARD
+
+Create a premium System Control Center.
+
+8.1 Dashboard Statistics
+
+Display:
+
+Total Members.
+
+
+Active Members.
+
+
+Inactive Members.
+
+
+Total Monthly Savings.
+
+
+Total Savings.
+
+
+Total Shares.
+
+
+Total Share Value.
+
+
+Total Loan Disbursed.
+
+
+Total Loan Balance.
+
+
+Total Loan Interest.
+
+
+Total Loan Fine.
+
+
+Active Loans.
+
+
+Closed Loans.
+
+
+Inactive Loans.
+
+
+Total Bank Balance.
+
+
+Total Cash Balance.
+
+
+Pending Loan Applications.
+
+
+Pending Online Payments.
+
+
+Total Meetings.
+
+
+Show whether displayed statistics are live or based on the last synchronized data.
+
+8.2 Charts
+
+Include:
+
+Monthly Savings Chart.
+
+
+Loan Distribution Chart.
+
+
+Loan Repayment Chart.
+
+
+Cash and Bank Balance Chart.
+
+
+Member Growth Chart.
+
+
+Payment Status Chart.
+
+
+Monthly Income and Expense Chart.
+
+
+Include date filters.
+
+8.3 Member Access Manager
+
+System can:
+
+Add Member Account.
+
+
+Link Mobile Number.
+
+
+Set Four-Digit PIN.
+
+
+Reset Member PIN.
+
+
+Activate Account.
+
+
+Deactivate Account.
+
+
+Lock Account.
+
+
+Unlock Account.
+
+
+View Login History.
+
+
+Never display PIN hashes or recoverable passwords.
+
+8.4 Live Content and Layout Manager
+
+Manage:
+
+Homepage Text.
+
+
+Dashboard Banners.
+
+
+Announcement Text.
+
+
+Notice Content.
+
+
+Theme Colors.
+
+
+Homepage Sections.
+
+
+Image Uploads.
+
+
+Video Uploads.
+
+
+Document Uploads.
+
+
+Page Visibility.
+
+
+Role-Specific Content.
+
+
+8.5 Dynamic QR Code Manager
+
+System can:
+
+Upload Society UPI QR.
+
+
+Replace QR.
+
+
+Update UPI ID.
+
+
+Update Payment Instructions.
+
+
+Show or Hide QR.
+
+
+Activate or Deactivate Payment Options.
+
+
+Updated QR must appear on authorized payment screens.
+
+8.6 Media Manager
+
+Allow:
+
+Images.
+
+
+Photos.
+
+
+Videos.
+
+
+PDF Files.
+
+
+Official Documents.
+
+
+Notices.
+
+
+Control visibility for President, Secretary, Members, and Everyone.
+
+8.7 Permission Switchboard
+
+Implement the complete dynamic permission system.
+
+8.8 System Content Manager
+
+Publish content to:
+
+Homepage.
+
+
+Member Dashboard.
+
+
+President Dashboard.
+
+
+Secretary Dashboard.
+
+
+Content types:
+
+Notification Bars.
+
+
+Text Announcements.
+
+
+Images.
+
+
+Videos.
+
+
+Documents.
+
+
+PDF Files.
+
+
+Allow:
+
+Add.
+
+
+Edit.
+
+
+Delete.
+
+
+Publish.
+
+
+Unpublish.
+
+
+Schedule.
+
+
+Expiry Date.
+
+
+Target Role.
+
+
+8.9 Society Settings
+
+Include:
+
+Society Name.
+
+
+Society Logo.
+
+
+Society Address.
+
+
+Contact Details.
+
+
+Official Email.
+
+
+UPI Information.
+
+
+Bank Details.
+
+
+Financial Year.
+
+
+Currency.
+
+
+Date Format.
+
+
+Language Defaults.
+
+
+Theme Settings.
+
+
+Receipt Numbering.
+
+
+Member ID Numbering.
+
+
+Loan Numbering.
+
+
+9. PRESIDENT DASHBOARD
+
+Create a completely separate President Dashboard.
+
+President must not access System Control Center unless separately authorized.
+
+9.1 Executive Overview
+
+Display:
+
+Total Members.
+
+
+Active Members.
+
+
+Inactive Members.
+
+
+Monthly Savings.
+
+
+Total Savings.
+
+
+Total Loan Balance.
+
+
+Total Loan Interest.
+
+
+Total Loan Fine.
+
+
+Active Loans.
+
+
+Closed Loans.
+
+
+Bank Balance.
+
+
+Cash Balance.
+
+
+Include charts and date filters.
+
+9.2 Approval Desk
+
+Provide:
+
+Loan Application List.
+
+
+Application Details.
+
+
+Applicant Identity.
+
+
+Member ID.
+
+
+Member Name.
+
+
+Mobile Number.
+
+
+Requested Loan Amount.
+
+
+Loan Purpose.
+
+
+Application Date.
+
+
+Additional Note.
+
+
+Actions according to permissions:
+
+View.
+
+
+Approve.
+
+
+Reject.
+
+
+Request More Information.
+
+
+Set Approved Amount.
+
+
+Add Approval Note.
+
+
+Upload Digital Signature.
+
+
+Download Approval Document.
+
+
+After approval, create or update the corresponding authorized loan record.
+
+Approval must not automatically disburse a loan.
+
+Record actual disbursement separately.
+
+9.3 System Registers View
+
+Provide:
+
+Member Register.
+
+
+Saving Register.
+
+
+Loan Register.
+
+
+Cash Book.
+
+
+Share Register.
+
+
+Attendance Register.
+
+
+Loan Applications.
+
+
+Online Payments.
+
+
+All actions follow System permissions.
+
+9.4 Daily Operations Desk
+
+Provide:
+
+Meeting Management.
+
+
+Attendance Register.
+
+
+Saving Register.
+
+
+Loan Register.
+
+
+Cash Book Register.
+
+
+Share Register.
+
+
+New Member Registration.
+
+
+9.5 Loan Repayment Register
+
+Provide:
+
+Loan Installment Entry.
+
+
+Repayment Date.
+
+
+Principal Repayment.
+
+
+Interest Received.
+
+
+Fine Received.
+
+
+Payment Method.
+
+
+Remaining Loan Balance.
+
+
+Next Due Date.
+
+
+Receipt Generation.
+
+
+9.6 ID and Certificate Hub
+
+Digital ID Card:
+
+GMCSL Logo.
+
+
+Member Photo.
+
+
+Member ID.
+
+
+Member Name.
+
+
+Mobile Number.
+
+
+Join Date.
+
+
+Official Society Name.
+
+
+Authorized Signature.
+
+
+QR Verification Code.
+
+
+Actions:
+
+Generate.
+
+
+Preview.
+
+
+Download.
+
+
+Reprint.
+
+
+Membership Certificate:
+
+Society Logo.
+
+
+Society Name.
+
+
+Certificate Number.
+
+
+Member Name.
+
+
+Member ID.
+
+
+Join Date.
+
+
+Certificate Issue Date.
+
+
+Official Signature.
+
+
+Professional Border.
+
+
+Verification QR.
+
+
+Provide PDF preview and download.
+
+9.7 Online Payment
+
+Display active Society UPI QR.
+
+Provide:
+
+Pay Now.
+
+
+Payment Instructions.
+
+
+Transaction ID.
+
+
+Payment Screenshot Upload.
+
+
+Payment Date.
+
+
+Amount.
+
+
+Payment Category.
+
+
+Submission Status.
+
+
+Use properly configured UPI payment intents or supported gateways.
+
+Never treat opening a payment app as proof of successful payment.
+
+9.8 Loan Application
+
+President can review and process applications according to permissions.
+
+10. SECRETARY DASHBOARD
+
+Create a completely separate Secretary Dashboard.
+
+It must have its own sidebar, navigation, overview, and workspace.
+
+10.1 Secretary Overview
+
+Display:
+
+Total Members.
+
+
+Active Members.
+
+
+Inactive Members.
+
+
+Monthly Savings.
+
+
+Total Savings.
+
+
+Active Loans.
+
+
+Closed Loans.
+
+
+Total Loan Balance.
+
+
+Pending Loan Applications.
+
+
+Pending Payments.
+
+
+Today's Attendance.
+
+
+Cash Balance.
+
+
+Bank Balance.
+
+
+10.2 Daily Operations Desk
+
+Provide:
+
+Meeting Creation.
+
+
+Attendance Entry.
+
+
+Saving Entry.
+
+
+Loan Entry.
+
+
+Cash Book Entry.
+
+
+Share Entry.
+
+
+New Member Registration.
+
+
+All Add/Edit/Delete buttons must follow System permissions.
+
+10.3 Loan Repayment Register
+
+Provide:
+
+Installment Entry.
+
+
+Repayment Amount.
+
+
+Interest.
+
+
+Fine.
+
+
+Payment Date.
+
+
+Payment Method.
+
+
+Remaining Balance.
+
+
+Next Due Date.
+
+
+Receipt Generation.
+
+
+10.4 Secretary Registers
+
+Provide:
+
+Member Register.
+
+
+Saving Register.
+
+
+Loan Register.
+
+
+Cash Book.
+
+
+Share Register.
+
+
+Attendance Register.
+
+
+Loan Application Register.
+
+
+Online Payment Register.
+
+
+10.5 ID and Certificate Hub
+
+Provide:
+
+ID Card Preview.
+
+
+Generate ID Card.
+
+
+Download ID Card.
+
+
+Certificate Preview.
+
+
+Generate Certificate.
+
+
+Download Certificate.
+
+
+10.6 Online Payments
+
+Secretary can view and verify payments only when authorized.
+
+10.7 Loan Applications
+
+Secretary can:
+
+View Applications.
+
+
+Review Applicant Information.
+
+
+Add Processing Notes.
+
+
+Forward Applications.
+
+
+Recommend Approval.
+
+
+Update Status according to permissions.
+
+
+Final approval must follow authorized workflow.
+
+11. MEMBER DASHBOARD
+
+Create an attractive, simple personal Member Dashboard.
+
+Each member must see only their own private information.
+
+11.1 My Summary
+
+Display:
+
+Member Name.
+
+
+Member ID.
+
+
+Profile Photo.
+
+
+Account Status.
+
+
+Total Savings.
+
+
+Current Month Saving.
+
+
+Total Interest.
+
+
+Total Fine.
+
+
+Number of Shares.
+
+
+Total Share Value.
+
+
+Current Loan Balance.
+
+
+Total Loan Repaid.
+
+
+Upcoming Due Date.
+
+
+Pending Payments.
+
+
+Recent Transactions.
+
+
+11.2 My Profile
+
+Display:
+
+Personal Information.
+
+
+Contact Information.
+
+
+Address.
+
+
+Bank Details.
+
+
+Photo.
+
+
+Signature.
+
+
+Membership Date.
+
+
+Profile editing only when permitted.
+
+11.3 My Saving History
+
+Display:
+
+Date.
+
+
+Monthly Saving.
+
+
+Previous Saving.
+
+
+Interest.
+
+
+Fine.
+
+
+Total.
+
+
+Payment Status.
+
+
+Receipt.
+
+
+Allow viewing and downloading own receipts.
+
+No member editing or deletion of saving records.
+
+11.4 My Loan Details
+
+Display:
+
+Loan Number.
+
+
+Loan Date.
+
+
+Original Loan Amount.
+
+
+Interest.
+
+
+Fine.
+
+
+Repayment History.
+
+
+Remaining Loan Balance.
+
+
+Next Due Date.
+
+
+Loan Status.
+
+
+No member editing or deletion.
+
+11.5 My Share Details
+
+Display:
+
+Number of Shares.
+
+
+Face Value.
+
+
+Total Share Value.
+
+
+Date.
+
+
+Notes.
+
+
+11.6 My Attendance
+
+Display personal attendance history.
+
+11.7 Digital ID and Membership Certificate
+
+Provide:
+
+ID Card Preview.
+
+
+Download ID Card.
+
+
+Certificate Preview.
+
+
+Download Certificate.
+
+
+Members can access only their own documents.
+
+11.8 Online Payment
+
+Allow:
+
+View Society QR.
+
+
+Open UPI App.
+
+
+Enter Transaction ID.
+
+
+Upload Screenshot.
+
+
+Select Payment Category.
+
+
+Submit Payment.
+
+
+View Verification Status.
+
+
+Download Verified Receipt.
+
+
+11.9 Loan Application
+
+Allow:
+
+Apply for Loan.
+
+
+View Own Application.
+
+
+Track Status.
+
+
+View Approved Amount.
+
+
+View Approval Note.
+
+
+View Rejection Reason.
+
+
+Members cannot approve their own applications.
+
+11.10 Notices and Notifications
+
+Display relevant notices and notifications.
+
+12. COMPLETE FORM ARCHITECTURE
+
+Create attractive, validated, professional forms.
+
+Use:
+
+Proper Labels.
+
+
+Required Indicators.
+
+
+Dropdowns.
+
+
+Date Pickers.
+
+
+File Upload.
+
+
+Automatic Calculations.
+
+
+Submit and Cancel Buttons.
+
+
+Offline Save Indicators.
+
+
+Validation Messages.
+
+
+Every form must preserve entered information when internet connectivity is lost.
+
+FORM 1: MEMBER REGISTER
+
+Fields:
+
+Member ID – Auto Generated System Editable.
+
+
+Member Name.
+
+
+Father's Name.
+
+
+Join Date.
+
+
+Date of Birth.
+
+
+Aadhaar Number.
+
+
+PAN Number.
+
+
+Voter ID.
+
+
+Bank Account Number.
+
+
+IFSC Code.
+
+
+Branch Name.
+
+
+Mobile Number.
+
+
+Gmail ID.
+
+
+State – Assam 
+Editable.
+
+
+District.
+
+
+Development Block.
+
+
+Village.
+
+
+Post Office.
+
+
+PIN Code.
+
+
+Panchayat.
+
+
+Photo Upload.
+
+
+Signature Upload.
+
+
+Account Status – Active / Inactive.
+
+
+Validate required fields and mobile numbers.
+
+Avoid exposing sensitive identity and bank information.
+
+FORM 2: SAVING REGISTER
+
+Fields:
+
+Saving ID – Auto Generated.
+
+
+Member ID – Automatically Selected.
+
+
+Member Name – Auto Filled.
+
+
+Date.
+
+
+Monthly Saving Amount.
+
+Interest.
+
+
+Fine.
+
+
+Total Saving.
+
+
+Payment Status.
+
+
+Payment Method.
+
+
+Meeting Status.
+
+
+Payment Status:
+
+Online.
+
+
+Cash.
+
+
+Pending.
+
+
+No Payment.
+
+
+Meeting Status:
+
+Present.
+
+
+Absent.
+
+
+Calculation:
+
+Total Saving Balance =Monthly Saving Amount + Interest + Fine.
+
+Current Transaction Amount = Monthly Saving Amount + Interest + Fine.
+
+Do not add Previous Saving Balance again when calculating a transaction receipt.
+
+FORM 3: LOAN REGISTER
+
+Fields:
+
+Loan ID – Auto Generated, System Editable.
+
+
+Loan Number.
+
+
+Member ID – Auto Selected, System Editable.
+
+
+Member Name.
+
+
+Date.
+
+
+Loan Amount.
+
+
+Previous Loan Amount.
+
+
+Loan Repayment.
+
+
+Interest.
+
+
+Fine.
+
+
+Total Loan Amount.
+
+
+Current Loan Balance.
+
+
+Next Due Date.
+
+
+Payment Status.
+
+
+Loan Status.
+
+
+Payment Method.
+
+
+Member Signature Upload.
+
+
+Secretary Signature Upload.
+
+
+President Signature Upload.
+
+
+Payment Status:
+
+Online.
+
+
+Cash.
+
+
+Pending.
+
+
+No Payment.
+
+
+Loan Status:
+
+Active.
+
+
+Close.
+
+
+Inactive.
+
+
+Running.
+
+
+Payment Method:
+
+Saving.
+
+
+Interest.
+
+
+Loan.
+
+
+Fine.
+
+
+Other.
+
+
+Calculation:
+
+Total Loan Amount = New Loan Amount.
+
+Current Loan Balance = Total Loan Amount - Principal Repayment.
+
+Interest and Fine must remain separate from principal.
+
+Prevent negative loan balances.
+
+Close a loan only after authorized settlement of outstanding dues.
+
+FORM 4: CASH BOOK REGISTER
+
+Fields:
+
+Transaction ID – Auto Generated.
+
+
+Payment Mode – Deposit / Payment.
+
+
+Date.
+
+
+Description.
+
+
+Bank Amount.
+
+
+Cash Amount.
+
+
+Total Amount.
+
+
+Reference Number.
+
+
+Notes.
+
+
+Calculation:
+
+Total Amount = Bank Amount + Cash Amount.
+
+Maintain separate Bank Balance and Cash Balance.
+
+Deposits increase the appropriate balance.
+
+Payments decrease the appropriate balance.
+
+Prevent invalid negative balances without an authorized adjustment workflow.
+
+FORM 5: SHARE REGISTER
+
+Fields:
+
+Share ID – Auto Generated.
+
+
+Member ID – Auto Selected.
+
+
+Member Name.
+
+
+Number of Shares.
+
+
+Face Value per Share.
+
+
+Total Share Value – Auto Calculated.
+
+
+Date.
+
+
+Note.
+
+
+Calculation:
+
+Total Share Value = Number of Shares × Face Value per Share.
+
+FORM 6: LOAN APPLICATION
+
+Fields:
+
+Application ID – Auto Generated.
+
+
+Member ID – Automatically Retrieved.
+
+
+Member Name – Automatically Retrieved.
+
+
+Mobile Number – Automatically Retrieved.
+
+
+Date.
+
+
+Loan Amount Required.
+
+
+Purpose of Loan.
+
+
+Additional Note.
+
+
+Supporting Document Upload – Optional.
+
+
+Application Status.
+
+
+Purpose:
+
+Business.
+
+
+Agriculture.
+
+
+Farmer.
+
+
+Other.
+
+
+Application Status:
+
+Pending.
+
+
+Under Review.
+
+
+Recommended.
+
+
+Approved.
+
+
+Rejected.
+
+
+Cancelled.
+
+
+Include complete applicant identity.
+
+FORM 7: ONLINE PAYMENT
+
+Display:
+
+Society UPI QR Code.
+
+
+UPI ID.
+
+
+Payment Instructions.
+
+
+Pay Now Button.
+
+
+Fields:
+
+Payment ID – Auto Generated.
+
+
+Member ID – Auto Retrieved.
+
+
+Member Name – Auto Retrieved.
+
+
+Date.
+
+
+Amount.
+
+
+Payment Method.
+
+
+Transaction ID.
+
+
+Payment Screenshot Upload.
+
+
+Note.
+
+
+Payment Method:
+
+Saving.
+
+
+Interest.
+
+
+Fine.
+
+
+Loan.
+
+
+Other.
+
+
+Verification Status:
+
+Pending.
+
+
+Verified.
+
+
+Rejected.
+
+
+Never automatically verify submitted payments.
+
+Prevent duplicate transaction IDs.
+
+Offline submissions must remain Pending until online verification.
+
+FORM 8: ATTENDANCE REGISTER
+
+Fields:
+
+Attendance ID – Auto Generated.
+
+
+Member ID – Auto Selected.
+
+
+Member Name – Auto Filled.
+
+
+Date.
+
+
+Meeting Location.
+
+
+Meeting Number.
+
+
+Meeting Method.
+
+
+Attendance Status.
+
+
+Meeting Method:
+
+Executive Meeting.
+
+
+General Meeting.
+
+
+Attendance Status:
+
+Present.
+
+
+Absent.
+
+
+Include bulk attendance entry.
+
+Prevent duplicate attendance for the same member and meeting.
+
+13. ADDITIONAL MANAGEMENT MODULES
+
+Implement every module below.
+
+13.1 Meeting Register
+
+Fields:
+
+Meeting ID.
+
+
+Meeting Number.
+
+
+Meeting Date.
+
+
+Meeting Type.
+
+
+Meeting Location.
+
+
+Meeting Agenda.
+
+
+Meeting Notes.
+
+
+Created By.
+
+
+13.2 Meeting Attendance
+
+Connect Meeting Register with Attendance Register.
+
+Allow authorized officers to record attendance.
+
+13.3 Member Attendance History
+
+Show personal attendance history and summary.
+
+13.4 Notice Board
+
+Support:
+
+General Notices.
+
+
+Meeting Notices.
+
+
+Payment Notices.
+
+
+Important Announcements.
+
+
+Emergency Notices.
+
+
+Attachments:
+
+Text.
+
+
+Images.
+
+
+PDF.
+
+
+Documents.
+
+
+Include publish date, expiry date, and target role.
+
+13.5 Reports and Statements
+
+Generate:
+
+Monthly Saving Report.
+
+
+Annual Saving Report.
+
+
+Loan Register Report.
+
+
+Loan Repayment Report.
+
+
+Outstanding Loan Report.
+
+
+Interest Report.
+
+
+Fine Report.
+
+
+Cash Book Report.
+
+
+Bank Statement.
+
+
+Share Register Report.
+
+
+Member Register Report.
+
+
+Attendance Report.
+
+
+Online Payment Report.
+
+
+Pending Payment Report.
+
+
+Income and Expense Report.
+
+
+Consolidated Financial Statement.
+
+
+13.6 Member Reports
+
+Members can view only their own:
+
+Saving Statement.
+
+
+Loan Statement.
+
+
+Share Statement.
+
+
+Payment History.
+
+
+Attendance History.
+
+
+Receipt History.
+
+
+13.7 Signature and Document Upload
+
+Allow authorized uploads of:
+
+Member Signature.
+
+
+President Signature.
+
+
+Secretary Signature.
+
+
+Official Documents.
+
+
+Certificates.
+
+
+Supporting Loan Documents.
+
+
+13.8 Notifications
+
+Create notifications for:
+
+New Loan Application.
+
+
+Loan Approved.
+
+
+Loan Rejected.
+
+
+Payment Submitted.
+
+
+Payment Verified.
+
+
+Payment Rejected.
+
+
+Saving Entry.
+
+
+Loan Repayment.
+
+
+New Notice.
+
+
+Upcoming Meeting.
+
+
+Due Date Reminder.
+
+
+Provide unread count and notification history.
+
+13.9 Audit Log
+
+Record:
+
+User ID.
+
+
+User Role.
+
+
+Action.
+
+
+Module.
+
+
+Record ID.
+
+
+Previous Value.
+
+
+Updated Value.
+
+
+Date and Time.
+
+
+IP or Session Information.
+
+
+Track:
+
+Add.
+
+
+Edit.
+
+
+Delete.
+
+
+Approval.
+
+
+Rejection.
+
+
+Login.
+
+
+Logout.
+
+
+Permission Changes.
+
+
+Offline Changes.
+
+
+Synchronization.
+
+
+Conflict Resolution.
+
+
+Offline audit entries must be queued and synchronized securely.
+
+Audit records must not be editable by ordinary users.
+
+13.10 Logout
+
+Provide secure logout for every role.
+
+14. AUTOMATIC CALCULATION AND FINANCIAL INTEGRITY
+
+All financial calculations must be validated on the backend.
+
+Use decimal-safe monetary calculations.
+
+Include:
+
+Saving Balance Calculation.
+
+
+Loan Balance Calculation.
+
+
+Interest Calculation.
+
+
+Fine Calculation.
+
+
+Cash Balance Calculation.
+
+
+Bank Balance Calculation.
+
+
+Share Value Calculation.
+
+
+Total Income.
+
+
+Total Expense.
+
+
+Outstanding Amount.
+
+
+Maintain a transaction ledger.
+
+Prevent duplicate posting.
+
+Provide correction and reversal entries instead of silently changing completed financial transactions.
+
+Offline financial entries must remain locally Pending until successfully validated and posted by the backend.
+
+Maintain financial audit history.
+
+Use financial-year filters.
+
+15. PDF RECEIPTS, REPORTS AND CERTIFICATES
+
+Create professional PDF templates.
+
+Receipt Types:
+
+Saving Receipt.
+
+
+Loan Repayment Receipt.
+
+
+Loan Disbursement Receipt.
+
+
+Online Payment Receipt.
+
+
+Share Purchase Receipt.
+
+
+Cash Book Voucher.
+
+
+Every receipt must contain:
+
+GMCSL Logo.
+
+
+Society Name.
+
+
+Receipt Number.
+
+
+Date.
+
+
+Member ID.
+
+
+Member Name.
+
+
+Transaction Details.
+
+
+Amount.
+
+
+Payment Method.
+
+
+Authorized Signature.
+
+
+Verification Status.
+
+
+Provide:
+
+Preview.
+
+
+Download PDF.
+
+
+Print.
+
+
+Reprint.
+
+
+Offline receipt generation must display a clear PROVISIONAL / NOT YET VERIFIED status where synchronization or verification is still pending.
+
+Never issue an official verified receipt for an unverified payment.
+
+Reports:
+
+PDF Export.
+
+
+Excel Export.
+
+
+CSV Export.
+
+
+Print.
+
+
+All reports must respect role permissions.
+
+16. THEME AND APPEARANCE SETTINGS
+
+System can customize:
+
+Primary Color.
+
+
+Secondary Color.
+
+
+Accent Color.
+
+
+Sidebar Color.
+
+
+Header Color.
+
+
+Button Style.
+
+
+Card Style.
+
+
+Logo.
+
+
+Dashboard Banner.
+
+
+Include:
+
+Light Mode.
+
+
+Dark Mode.
+
+
+Automatic Theme.
+
+
+Save theme preferences.
+
+17. ADVANCED SEARCH AND FILTER
+
+Every register must have a professional search system.
+
+Search by:
+
+Member ID.
+
+
+Member Name.
+
+
+Mobile Number where authorized.
+
+
+Transaction ID.
+
+
+Loan Number.
+
+
+Receipt Number.
+
+
+Date.
+
+
+Status.
+
+
+Include:
+
+Date Range Filter.
+
+
+Status Filter.
+
+
+Member Filter.
+
+
+Payment Method Filter.
+
+
+Sort Ascending.
+
+
+Sort Descending.
+
+
+Pagination.
+
+
+Export Filtered Results.
+
+
+Offline search must operate on authorized locally synchronized records.
+
+18. SECURITY AND PRIVACY REQUIREMENTS
+
+Implement:
+
+Role-Based Access Control.
+
+
+Server-Side Permission Verification.
+
+
+Secure Authentication.
+
+
+Password Hashing.
+
+
+PIN Hashing.
+
+
+Session Expiration.
+
+
+Rate Limiting.
+
+
+File Upload Validation.
+
+
+Protected File Access.
+
+
+Sensitive Field Masking.
+
+
+Audit Logs.
+
+
+Secure API Endpoints.
+
+
+Input Validation.
+
+
+CSRF Protection where applicable.
+
+
+Secure Secrets Management.
+
+
+Backup and Recovery.
+
+
+Data Export Authorization.
+
+
+HTTPS.
+
+
+Offline Data Protection.
+
+
+Synchronization Authentication.
+
+
+Duplicate Transaction Protection.
+
+
+Never store plain-text passwords or PINs.
+
+Do not place confidential information in publicly accessible Google Sheets.
+
+Restrict Aadhaar, PAN, bank details, and member documents.
+
+Do not display another member's private records.
+
+19. BACKUP AND DATA EXPORT
+
+Create a Backup and Restore module.
+
+Authorized System users can:
+
+Create Backup.
+
+
+View Backup History.
+
+
+Export Google Sheets Data.
+
+
+Download Excel.
+
+
+Download CSV.
+
+
+Export PDF Reports.
+
+
+Restore Data.
+
+
+View Last Backup Date.
+
+
+View Backup Status.
+
+
+Require confirmation before restoring or overwriting records.
+
+Record backup and restoration operations in Audit Logs.
+
+Offline backup may create an encrypted local export where technically supported.
+
+Server backup and official restoration must require connectivity.
+
+20. HOMEPAGE DESIGN
+
+Create a professional public homepage.
+
+Include:
+
+GMCSL Logo.
+
+
+Society Name.
+
+
+Professional Hero Section.
+
+
+Society Introduction.
+
+
+Important Notices.
+
+
+Society Announcements.
+
+
+Photo Gallery.
+
+
+Video Gallery.
+
+
+Important Documents.
+
+
+Login Now Button.
+
+
+Assamese / English Switcher.
+
+
+Contact Information.
+
+
+Footer.
+
+
+System controls homepage content.
+
+Do not expose private financial information.
+
+Login Now opens the four-option Role Selection screen.
+
+Homepage must also load from the cached application shell when offline.
+
+21. COMPLETE NAVIGATION STRUCTURE
+
+Create separate navigation menus.
+
+System Sidebar
+
+System Dashboard.
+
+
+Member Management.
+
+
+Member PIN Management.
+
+
+President Management.
+
+
+Secretary Management.
+
+
+Saving Register.
+
+
+Loan Register.
+
+
+Loan Applications.
+
+
+Share Register.
+
+
+Cash Book.
+
+
+Attendance.
+
+
+Online Payments.
+
+
+Payment Verification.
+
+
+Meeting Register.
+
+
+Notice Board.
+
+
+Media Manager.
+
+
+ID Card Manager.
+
+
+Certificate Manager.
+
+
+Reports.
+
+
+Permission Management.
+
+
+Notification Manager.
+
+
+Theme Manager.
+
+
+Society Settings.
+
+
+Google Sheets Integration.
+
+
+Backup and Restore.
+
+
+Offline Data Manager.
+
+
+Synchronization Manager.
+
+
+Audit Log.
+
+
+System Security.
+
+
+Logout.
+
+
+President Sidebar
+
+President Dashboard.
+
+
+Member Register.
+
+
+Saving Register.
+
+
+Loan Register.
+
+
+Loan Applications.
+
+
+Loan Approval Desk.
+
+
+Loan Repayment.
+
+
+Share Register.
+
+
+Cash Book.
+
+
+Attendance.
+
+
+Meeting Register.
+
+
+Online Payments.
+
+
+ID Card and Certificates.
+
+
+Notice Board.
+
+
+Reports.
+
+
+My Profile.
+
+
+Notifications.
+
+
+Sync Status.
+
+
+Logout.
+
+
+Secretary Sidebar
+
+Secretary Dashboard.
+
+
+Member Register.
+
+
+Saving Register.
+
+
+Loan Register.
+
+
+Loan Repayment.
+
+
+Loan Applications.
+
+
+Share Register.
+
+
+Cash Book.
+
+
+Attendance Register.
+
+
+Meeting Register.
+
+
+Online Payments.
+
+
+Payment Verification.
+
+
+ID Card and Certificates.
+
+
+Notice Board.
+
+
+Reports.
+
+
+My Profile.
+
+
+Notifications.
+
+
+Sync Status.
+
+
+Logout.
+
+
+Member Sidebar
+
+My Dashboard.
+
+
+My Profile.
+
+
+My Savings.
+
+
+My Loan.
+
+
+Apply for Loan.
+
+
+My Shares.
+
+
+Online Payment.
+
+
+My Payment History.
+
+
+My Attendance.
+
+
+My ID Card.
+
+
+My Membership Certificate.
+
+
+Notice Board.
+
+
+Notifications.
+
+
+Sync Status.
+
+
+Logout.
+
+
+All menus must be dynamically filtered by System permission settings.
+
+22. ONLINE AND OFFLINE WORKFLOWS
+
+22.1 Member Registration Workflow
+
+Authorized user creates member record.
+
+
+Generate unique Member ID.
+
+
+Upload photo and signature.
+
+
+Assign registered mobile number.
+
+
+Set or reset PIN securely.
+
+
+Synchronize record.
+
+
+Member can log in after account activation.
+
+
+22.2 Saving Workflow
+
+Authorized officer selects member.
+
+
+Enter monthly saving.
+
+
+Enter interest.
+
+
+Enter fine.
+
+
+Enter payment information.
+
+
+Calculate total.
+
+
+Save transaction locally or online.
+
+
+Generate appropriate receipt.
+
+
+If offline, add to pending synchronization queue.
+
+
+Synchronize when online.
+
+
+Update official financial ledger after server validation.
+
+
+22.3 Loan Workflow
+
+Member submits application.
+
+
+Application appears in authorized approval dashboard.
+
+
+President or authorized officer reviews it.
+
+
+Application is approved or rejected.
+
+
+Approved amount is recorded.
+
+
+Actual loan disbursement is recorded separately.
+
+
+Loan Register is updated.
+
+
+Installments are recorded.
+
+
+Remaining balance is calculated.
+
+
+Receipt is generated.
+
+
+Offline loan applications may be saved locally and submitted later.
+
+22.4 Online Payment Workflow
+
+Member opens payment page.
+
+
+System displays active QR.
+
+
+Member pays using supported UPI app.
+
+
+Member enters Transaction ID.
+
+
+Member uploads screenshot.
+
+
+Payment enters Pending status.
+
+
+Authorized officer verifies online.
+
+
+Verified payment creates the corresponding ledger entry.
+
+
+Receipt is generated.
+
+
+Prevent duplicate posting.
+
+Offline payment submissions remain Pending until verification.
+
+22.5 Cash Book Workflow
+
+Authorized officer records deposit or payment.
+
+
+Calculate Bank and Cash balances separately.
+
+
+Save transaction.
+
+
+Update dashboard after successful posting.
+
+
+Record audit entry.
+
+
+Offline entries remain Pending until server validation.
+
+22.6 Permission Workflow
+
+System changes permission.
+
+
+Save permission.
+
+
+Backend enforces new permission.
+
+
+Frontend navigation updates.
+
+
+Offline permission cache refreshes during the next authenticated synchronization.
+
+
+22.7 Offline Synchronization Workflow
+
+User creates an authorized offline record.
+
+
+Record is saved in IndexedDB.
+
+
+Record receives a unique Operation ID.
+
+
+Sync Status becomes Pending.
+
+
+User sees the Pending count.
+
+
+Internet becomes available.
+
+
+Backend validates identity and permissions.
+
+
+Backend checks duplicate Operation ID.
+
+
+Backend validates all financial fields.
+
+
+Backend saves the official record.
+
+
+IndexedDB updates Sync Status to Synced.
+
+
+Dashboard refreshes.
+
+
+If synchronization fails, preserve the local record and show the reason.
+
+23. USER INTERFACE QUALITY REQUIREMENTS
+
+Every page must be complete and consistent.
+
+Every button must perform its intended action.
+
+Every form must save real data when the backend is configured.
+
+Every navigation link must work.
+
+All dashboards must use real database statistics.
+
+Do not use fake production numbers.
+
+When no data exists, show zero or an attractive empty state.
+
+Add:
+
+Loading States.
+
+
+Success Messages.
+
+
+Error Messages.
+
+
+Confirmation Dialogs.
+
+
+Form Validation.
+
+
+Responsive Tables.
+
+
+Pagination.
+
+
+Sorting.
+
+
+Filters.
+
+
+Search.
+
+
+Print Layouts.
+
+
+Online / Offline Indicators.
+
+
+Sync Progress.
+
+
+Pending Record Counters.
+
+
+Conflict Alerts.
+
+
+Last Sync Time.
+
+
+24. TECHNICAL DEVELOPMENT REQUIREMENTS
+
+Frontend
+
+React.
+
+
+TypeScript.
+
+
+Responsive CSS.
+
+
+Component-Based Architecture.
+
+
+PWA.
+
+
+Service Worker.
+
+
+IndexedDB.
+
+
+Offline-First Architecture.
+
+
+Backend
+
+Node.js Server Runtime.
+
+
+Secure REST API.
+
+
+Google Sheets Integration.
+
+
+Authentication.
+
+
+Permission Middleware.
+
+
+Financial Validation.
+
+
+Synchronization API.
+
+
+Conflict Management API.
+
+
+Database
+
+Google Sheets remains the primary official business-record database.
+
+IndexedDB provides offline local storage.
+
+Do not create inconsistent duplicate financial records across databases.
+
+Storage
+
+Secure Google Drive or Firebase Storage.
+
+Charts
+
+Professional chart library.
+
+PDF
+
+Reliable PDF generation library.
+
+Excel
+
+Reliable spreadsheet export library.
+
+Security
+
+Keep all API keys and service credentials server-side.
+
+Use environment secrets.
+
+Build reusable components.
+
+Use clean folder structure.
+
+Implement proper API error handling.
+
+Implement efficient Google Sheets access.
+
+Do not use frontend-to-Google-Sheets direct writes.
+
+Do not use localStorage as the permanent financial database.
+
+25. DEVELOPMENT AND IMPLEMENTATION PRIORITIES
+
+Build systematically.
+
+PHASE 1:
+
+Project Setup.
+
+
+Design System.
+
+
+Homepage.
+
+
+Language System.
+
+
+Role Selection.
+
+
+Login Screens.
+
+
+Authentication.
+
+
+PWA Foundation.
+
+
+Offline Application Shell.
+
+
+PHASE 2:
+
+Database Integration.
+
+
+Google Sheets Connection.
+
+
+IndexedDB.
+
+
+Member Register.
+
+
+User Management.
+
+
+Permissions.
+
+
+Offline Data Storage.
+
+
+Synchronization Queue.
+
+
+PHASE 3:
+
+System Dashboard.
+
+
+President Dashboard.
+
+
+Secretary Dashboard.
+
+
+Member Dashboard.
+
+
+Live and Offline Statistics.
+
+
+PHASE 4:
+
+Saving Register.
+
+
+Loan Register.
+
+
+Share Register.
+
+
+Cash Book.
+
+
+Attendance Register.
+
+
+Meeting Register.
+
+
+PHASE 5:
+
+Loan Application.
+
+
+Loan Approval.
+
+
+Loan Repayment.
+
+
+Online Payment.
+
+
+Payment Verification.
+
+
+PHASE 6:
+
+ID Cards.
+
+
+Membership Certificates.
+
+
+PDF Receipts.
+
+
+Reports.
+
+
+Excel Export.
+
+
+PHASE 7:
+
+Notice Board.
+
+
+Notifications.
+
+
+Media Manager.
+
+
+Theme Manager.
+
+
+Audit Logs.
+
+
+Backup and Restore.
+
+
+PHASE 8:
+
+Offline Synchronization.
+
+
+Conflict Management.
+
+
+Security Testing.
+
+
+Role Permission Testing.
+
+
+Financial Calculation Testing.
+
+
+Mobile Responsiveness Testing.
+
+
+Offline Testing.
+
+
+Online Testing.
+
+
+Database Synchronization Testing.
+
+
+Production Readiness Review.
+
+
+26. FINAL ACCEPTANCE TESTING
+
+Before declaring the application complete, verify:
+
+All four login roles work.
+
+
+Every role opens its correct dashboard.
+
+
+Unauthorized users cannot access restricted APIs.
+
+
+System controls every module's permissions.
+
+
+Permission changes take effect immediately.
+
+
+Members see only personal financial information.
+
+
+All eight primary Google Sheets are integrated.
+
+
+All supporting sheets are created and mapped.
+
+
+Member registration works.
+
+
+Saving calculations are correct.
+
+
+Loan calculations are correct.
+
+
+Share calculations are correct.
+
+
+Cash and Bank balances are correct.
+
+
+Loan applications can be submitted and reviewed.
+
+
+Approval and disbursement are separate.
+
+
+Online payment submissions can be verified.
+
+
+Duplicate transactions are prevented.
+
+
+Receipts can be generated.
+
+
+ID cards can be generated.
+
+
+Membership certificates can be generated.
+
+
+Search and filters work.
+
+
+Reports export correctly.
+
+
+Assamese and English switching works.
+
+
+Mobile layouts work.
+
+
+Dark and Light modes work.
+
+
+Backup and Restore work.
+
+
+Audit logs are recorded.
+
+
+No private credentials are exposed.
+
+

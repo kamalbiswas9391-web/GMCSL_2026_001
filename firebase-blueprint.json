@@ -1,0 +1,273 @@
+{
+  "entities": {
+    "UserProfile": {
+      "title": "UserProfile",
+      "description": "Public non-PII user profile metadata for Firebase real-time sync.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "displayName": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 120
+        },
+        "role": {
+          "type": "string",
+          "enum": ["System", "President", "Secretary", "Member"]
+        },
+        "memberId": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "displayName", "role", "createdAt", "updatedAt"]
+    },
+    "UserPrivateInfo": {
+      "title": "UserPrivateInfo",
+      "description": "Isolated PII document for authenticated user email and mobile contact.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "email": {
+          "type": "string",
+          "maxLength": 180
+        },
+        "mobileNumber": {
+          "type": "string",
+          "maxLength": 20
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "email", "updatedAt"]
+    },
+    "CloudRecord": {
+      "title": "CloudRecord",
+      "description": "User-owned society record persisted in Firestore with offline cache and non-deletion guard.",
+      "type": "object",
+      "properties": {
+        "recordId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "module": {
+          "type": "string",
+          "enum": [
+            "members",
+            "savings",
+            "shares",
+            "loans",
+            "cash_book",
+            "attendance",
+            "loan_applications",
+            "online_payments",
+            "meetings",
+            "notices",
+            "receipts",
+            "certificates",
+            "society_settings"
+          ]
+        },
+        "ownerUid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "memberId": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "status": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "amount": {
+          "type": "number"
+        },
+        "fields": {
+          "type": "object"
+        },
+        "isDeleted": {
+          "type": "boolean"
+        },
+        "recordVersion": {
+          "type": "number"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "recordId",
+        "module",
+        "ownerUid",
+        "isDeleted",
+        "recordVersion",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "SocietySyncRecord": {
+      "title": "SocietySyncRecord",
+      "description": "Shared real-time society record with owner/admin isolation and soft-deletion preservation.",
+      "type": "object",
+      "properties": {
+        "recordId": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "module": {
+          "type": "string",
+          "enum": [
+            "members",
+            "savings",
+            "shares",
+            "loans",
+            "cash_book",
+            "attendance",
+            "loan_applications",
+            "online_payments",
+            "meetings",
+            "notices",
+            "receipts",
+            "certificates",
+            "society_settings"
+          ]
+        },
+        "ownerUid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "memberId": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "summary": {
+          "type": "string",
+          "maxLength": 300
+        },
+        "status": {
+          "type": "string",
+          "maxLength": 64
+        },
+        "amount": {
+          "type": "number"
+        },
+        "fields": {
+          "type": "object"
+        },
+        "isDeleted": {
+          "type": "boolean"
+        },
+        "recordVersion": {
+          "type": "number"
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": [
+        "recordId",
+        "module",
+        "ownerUid",
+        "isDeleted",
+        "recordVersion",
+        "createdAt",
+        "updatedAt"
+      ]
+    },
+    "AdminGrant": {
+      "title": "AdminGrant",
+      "description": "Trusted admin grant registry document.",
+      "type": "object",
+      "properties": {
+        "uid": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 128,
+          "pattern": "^[a-zA-Z0-9_\\-]+$"
+        },
+        "email": {
+          "type": "string",
+          "maxLength": 180
+        },
+        "grantedBy": {
+          "type": "string",
+          "maxLength": 128
+        },
+        "createdAt": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "updatedAt": {
+          "type": "string",
+          "format": "date-time"
+        }
+      },
+      "required": ["uid", "email", "grantedBy", "createdAt", "updatedAt"]
+    }
+  },
+  "firestore": {
+    "/users/{userId}": {
+      "schema": { "$ref": "#/entities/UserProfile" },
+      "description": "User public sync metadata document."
+    },
+    "/users/{userId}/private/{docId}": {
+      "schema": { "$ref": "#/entities/UserPrivateInfo" },
+      "description": "Isolated PII subcollection accessible only to the owning user or verified admin."
+    },
+    "/users/{userId}/records/{recordId}": {
+      "schema": { "$ref": "#/entities/CloudRecord" },
+      "description": "User-scoped offline-cached and real-time synced GMCSL records."
+    },
+    "/society_records/{recordId}": {
+      "schema": { "$ref": "#/entities/SocietySyncRecord" },
+      "description": "Shared real-time society records scoped by ownerUid or verified admin."
+    },
+    "/admins/{adminUid}": {
+      "schema": { "$ref": "#/entities/AdminGrant" },
+      "description": "Admin authorization documents."
+    }
+  }
+}
